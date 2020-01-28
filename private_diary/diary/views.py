@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views import generic
 from django.template import loader
 from django.http import HttpResponse
+from .forms import InquiryForm
 
 
 # def index(request):
@@ -16,4 +17,4 @@ class IndexView(generic.TemplateView):
 
 class InquiryView(generic.FormView):
     template_name = "inquiry.html"
-#     form_class = InquiryForm
+    form_class = InquiryForm
