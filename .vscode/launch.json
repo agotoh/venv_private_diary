@@ -4,6 +4,15 @@
   // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
+
+    {
+      "name": "Python: Django",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/private_diary/manage.py",
+      "args": ["runserver", "--noreload"],
+      "django": true
+    },
     {
       "name": "Python: Current File (Integrated Terminal)",
       "type": "python",
@@ -17,12 +26,10 @@
       "request": "attach",
       "port": 5678,
       "host": "localhost",
-      "pathMappings": [
-        {
-          "localRoot": "${workspaceFolder}",
-          "remoteRoot": "."
-        }
-      ]
+      "pathMappings": [{
+        "localRoot": "${workspaceFolder}",
+        "remoteRoot": "."
+      }]
     },
     {
       "name": "Python: Module",
@@ -30,19 +37,6 @@
       "request": "launch",
       "module": "enter-your-module-name-here",
       "console": "integratedTerminal"
-    },
-    {
-      "name": "Python: Django",
-      "type": "python",
-      "request": "launch",
-      "program": "${workspaceFolder}/manage.py",
-      "console": "integratedTerminal",
-      "args": [
-        "runserver",
-        "--noreload",
-        "--nothreading"
-      ],
-      "django": true
     },
     {
       "name": "Python: Flask",
