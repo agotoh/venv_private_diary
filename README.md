@@ -1,0 +1,49 @@
+Django アプリケーション
+# 環境の前提
+ - OS : mac
+ - python: 3.7.3
+    - venvを利用
+ - Django: 3
+ - DB: postgre ローカルにインストール
+    postgreのドライバとしてpsycopg2を利用
+
+# 初期構築
+## 前提
+ - python, postgreはインストール済み
+
+## 手順
+### ソースコード取得
+```bash:
+git clone git@github.com:agotoh/venv_private_diary.git
+```
+### データベース作成
+```bash:
+# postgre Start
+postgres -D /usr/local/var/postgres
+# データベース作成
+createdb private_diary
+# データベース確認
+psql -l
+```
+# 運用コマンド
+## venv仮想環境に入る
+```bash:
+cd bin
+# venv仮想環境に入る
+source activate
+# venv 終了
+deactivate
+```
+## djangoの起動
+```bash:
+python manage.py runserver
+```
+## pip install
+requirements.txtに追加の上
+```
+pip install -r requirements.txt
+```
+
+
+
+
