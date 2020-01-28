@@ -3,13 +3,11 @@ from django.views import generic
 from django.template import loader
 from django.http import HttpResponse
 from .forms import InquiryForm
+from django.urls import reverse_lazy
+import logging
 
+logger = logging.getLogger(__name__)
 
-# def index(request):
-#     # return HttpResponse("Hello, world. You're at the polls index.")
-#     template = loader.get_template('index.html')
-#     context = {}
-#     return HttpResponse(template.render(context, request))
 
 class IndexView(generic.TemplateView):
     template_name = "index.html"
@@ -18,3 +16,9 @@ class IndexView(generic.TemplateView):
 class InquiryView(generic.FormView):
     template_name = "inquiry.html"
     form_class = InquiryForm
+    success_url = reverse_lazy('diary:inquiry')
+
+    def form_valid(self, form):
+        form.send_email()
+        logger.info('Inquiry sent by {}'.format(form.cleaned_data['name']))
+        return super().form_valid(form)
