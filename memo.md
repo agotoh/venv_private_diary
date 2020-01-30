@@ -55,3 +55,10 @@ urls.py参照
 # vscode設定
 ## flake8の設定
 https://qiita.com/psychoroid/items/2c2acc06c900d2c0c8cb
+
+# 認証用アプリケーション作成
+```
+python manage.py startapp accounts
+python manage.py makemigrations
+python manage.py migrate
+```

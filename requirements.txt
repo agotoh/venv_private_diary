@@ -2,3 +2,4 @@ django>=3.0
 psycopg2-binary
 flake8
 autopep8
+django-allauth

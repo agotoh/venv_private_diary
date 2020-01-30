@@ -44,6 +44,13 @@ requirements.txtに追加の上
 pip install -r requirements.txt
 ```
 
+## migration
+```
+# migration ファイル作成
+python manage.py makemigrations --settings settings.settings_dev
+python manage.py migrate --settings settings.settings_dev
+```
+
 
 
 
