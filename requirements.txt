@@ -3,3 +3,4 @@ psycopg2-binary
 flake8
 autopep8
 django-allauth
+pillow

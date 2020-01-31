@@ -36,7 +36,7 @@ deactivate
 ```
 ## djangoの起動
 ```bash:
-python manage.py runserver --settings settings.settings_dev
+python manage.py runserver --settings private_diary.settings.settings_dev
 ```
 ## pip install
 requirements.txtに追加の上

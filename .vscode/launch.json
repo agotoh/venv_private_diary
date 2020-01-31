@@ -10,7 +10,7 @@
       "type": "python",
       "request": "launch",
       "program": "${workspaceFolder}/private_diary/manage.py",
-      "args": ["runserver", "--settings", "settings.settings_dev", "--noreload"],
+      "args": ["runserver", "--settings", "private_diary.settings.settings_dev", "--noreload"],
       "django": true
     },
     {
