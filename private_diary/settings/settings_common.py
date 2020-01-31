@@ -191,9 +191,9 @@ SITE_ID = 1
 
 AUTHENTICATION_BACKENDS = (
     # 一般ユーザ(メールアドレス認証)
-    'allauth.account.auth_backends.authenticationBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
     # 管理サイト用(ユーザ名認証)
-    'django.contrib.auth.backend.ModelBackend'
+    'django.contrib.auth.backends.ModelBackend'
 )
 
 # メールアドレス認証に変更する設定
