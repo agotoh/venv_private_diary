@@ -14,8 +14,13 @@ from django.contrib.messages import constants as messages
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Absolute filesystem path to the configuration root directory:
+CONFIG_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Absolute filesystem path to the django project root directory:
+BASE_DIR = os.path.dirname(CONFIG_ROOT)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -205,7 +210,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_EMAIL_REQUIRED = True
 
 # ログイン、ログアウト後の遷移先を設定
-LOGIN_REDIRECT_URL = 'diary:index'
+LOGIN_REDIRECT_URL = 'diary:diary_list'
 ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
 
 # ログアウトリンクのクリックのみでログアウトする設定

@@ -47,10 +47,23 @@ pip install -r requirements.txt
 ## migration
 ```
 # migration ファイル作成
-python manage.py makemigrations --settings settings.settings_dev
-python manage.py migrate --settings settings.settings_dev
+python manage.py makemigrations --settings private_diary.settings.settings_dev
+python manage.py migrate --settings private_diary.settings.settings_dev
 ```
 
+## スーパーユーザの作成
+```
+python manage.py createsuperuser --settings private_diary.settings.settings_dev
+```
+user_name:admin
+email: admin@example.com
+password: admin135
 
+## Djangoコマンドを使ってpostgreSQLにログインする方法
+```
+python manage.py dbshell  --settings private_diary.settings.settings_dev
+\dt
+select * from diary_diary;
+```
 
 
