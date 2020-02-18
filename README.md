@@ -66,4 +66,19 @@ python manage.py dbshell  --settings private_diary.settings.settings_dev
 select * from diary_diary;
 ```
 
+## Test
+```
+# 全テストを実行
+python manage.py test --settings private_diary.settings.settings_dev
+# applicationを指定して実行 (以下の例ではapp-name1とapp-name2を指定)
+python manage.py test app-name1 app-name2 --settings private_diary.settings.settings_dev
+# テストモジュール単位の実行
+python manage.py test diary.tests.test_views --settings private_diary.settings.settings_dev
+# テストクラス単位の実行
+python manage.py test diary.tests.test_views.TestDiaryCreateView --settings private_diary.settings.settings_dev
+# テストメソッド単位の実行
+python manage.py test diary.tests.test_views.TestDiaryCreateView.test_create_diary_failure --settings private_diary.settings.settings_dev
+# ディレクトリ内のテストを実行 (diaryディレクトリ内のテストを実行)
+python manage.py test diary/ --settings private_diary.settings.settings_dev
+```
 
