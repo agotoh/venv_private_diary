@@ -4,3 +4,7 @@ flake8
 autopep8
 django-allauth
 pillow
+selenium
+chromedriver
+# クロムのバージョンと合わせる
+chromedriver-binary==79.0.3945.16.0
