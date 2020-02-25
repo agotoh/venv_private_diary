@@ -82,3 +82,6 @@ python manage.py test diary.tests.test_views.TestDiaryCreateView.test_create_dia
 python manage.py test diary/ --settings private_diary.settings.settings_dev
 ```
 
+# バックアップバッチの実行
+python manage.py backup_diary --settings private_diary.settings.settings_dev
+

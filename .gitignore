@@ -3,3 +3,4 @@
 *.pyc
 __pycache__/
 private_diary/media/*
+private_diary/backup/*
